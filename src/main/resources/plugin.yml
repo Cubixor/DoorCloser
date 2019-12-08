@@ -1,0 +1,15 @@
+name: DoorCloser
+version: ${project.version}
+main: me.cubixor.doorcloser.DoorCloser
+api-version: 1.13
+authors: [Cubixor]
+description: Automatically closes all door in specified region.
+commands:
+  closedoors:
+    description: Close doors in specified radius.
+    usage: /closedoors <radius>
+    aliases: cd
+permissions:
+  closedoors:
+    description: Allows using /closedoors command.
+    default: op
