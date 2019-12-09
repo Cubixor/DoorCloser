@@ -2,6 +2,8 @@ package me.cubixor.doorcloser;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.Sound;
+import org.bukkit.SoundCategory;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.Openable;
@@ -69,6 +71,11 @@ public class Command implements CommandExecutor {
                             if (((Openable) data).isOpen()) {
                                 ((Openable) data).setOpen(false);
                                 doorBlock.setBlockData(data);
+                                if (doorBlock.getType().equals(Material.IRON_DOOR)) {
+                                    doorBlock.getWorld().playSound(doorBlock.getLocation(), Sound.BLOCK_IRON_DOOR_CLOSE, SoundCategory.BLOCKS, 1F, 1F);
+                                } else {
+                                    doorBlock.getWorld().playSound(doorBlock.getLocation(), Sound.BLOCK_WOODEN_DOOR_CLOSE, SoundCategory.BLOCKS, 1F, 1F);
+                                }
                                 closedDoorsAmount++;
                             }
                         }
