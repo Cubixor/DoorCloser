@@ -10,6 +10,6 @@ commands:
     usage: /closedoors <radius>
     aliases: cd
 permissions:
-  closedoors:
+  doorcloser.use:
     description: Allows using /closedoors command.
     default: op
