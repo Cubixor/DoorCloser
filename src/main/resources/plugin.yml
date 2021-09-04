@@ -9,7 +9,7 @@ commands:
     description: Close doors in specified radius.
     usage: /closedoors <radius>
     aliases: cd
-    permission: closedoors
+    permission: doorcloser.use
 permissions:
   doorcloser.use:
     description: Allows using /closedoors command.

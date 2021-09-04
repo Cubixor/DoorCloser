@@ -29,7 +29,7 @@ public class Command implements CommandExecutor {
             return true;
         }
 
-        if (!sender.hasPermission("closedoors")) {
+        if (!sender.hasPermission("doorcloser.use")) {
             sender.sendMessage(ChatColor.RED + "You don't have permission to do that!");
             return true;
         }
